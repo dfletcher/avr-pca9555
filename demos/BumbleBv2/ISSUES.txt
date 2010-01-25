@@ -1,0 +1,8 @@
+
+MCU = atmega32u2 issue
+----------------------
+There is a bug in the current avr-libc stopping `atmega32u2` working as an MCU
+setting. This setting mainly just adds more ram over the BumbleB v1's
+at90usb162, and .hex files made for at90usb162 appear to work on atmega32u2
+microcontrollers, so this demo actually runs fine if we just specify MCU =
+at90usb162. Once the toolchain catches up, this will be permanently fixed.

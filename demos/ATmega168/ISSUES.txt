@@ -1,0 +1,5 @@
+
+twimaster.c issue
+-----------------
+For some reason twimaster.c is not working on this chip. So the makefile is
+currently configured for software mode until this issue can be resolved.

@@ -1,0 +1,60 @@
+-------------------------------------------------------------------------------
+
+   PCA9555 AVR Driver
+   Copyright 2010 Dave Fletcher
+   <fletch@fletchtronics.net> http://fletchtronics.net
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License. 
+
+NOTE: The PCA9555 driver code and demos are distributed under the terms of the
+Apache 2.0 software license. The other pieces of this package including Dean
+Camera's LUFA and Peter Fleury's I2C Master are redistributed under the
+respective authors' terms.
+
+-------------------------------------------------------------------------------
+
+
+Summary
+-----------------------
+
+AVR driver for PCA9555. Wraps all PCA9555 functions in a simple C interface.
+
+The PCA9555 driver requres Peter Fleury's I2C master library, which is
+included in this package. AVRs with a TWI interface can replace the
+i2cmaster.S source in the makefile with twimaster.c, which uses the AVR's i2c
+hardware. If using the software i2cmaster.S version, configure the I2C pins
+at the top of the i2cmaster.S file.
+
+An example schematic, Cadsoft Eagle files, and other details can be found at:
+http://fletchtronics.net/pca9555
+
+
+Files
+-----------------------
+  ./
+    demos/    - demonstrations for various microcontrollers
+    LUFA/     - shared LUFA installation for USB AVRs
+    PCA9555/  - core C language driver
+    api.html  - programming details
+    ChangeLog - project history
+    makefile  - targets include "all", "clean", "doc", "dist"
+    README    - [you are here]
+
+
+Links
+-----------------------
+
+  PCA9555 @ fletchtronics: http://fletchtronics.net/pca9555
+  LUFA: http://www.fourwalledcubicle.com/LUFA.php
+  i2c: http://homepage.hispeed.ch/peterfleury/group__pfleury__ic2master.html
+  Datasheet: http://www.nxp.com/documents/data_sheet/PCA9555.pdf

@@ -1,0 +1,14 @@
+
+1Mhz clock issue
+----------------
+This chip doesn't run at full speed. The chip is factory configured to run at
+1Mhz, and is not selectable in software (clock_prescale_set is not implemented
+for ATmega32). twimaster.c seems to run OK with F_CPU set to eight million with
+this clock, but the whole thing runs slower than the other demos. An attempt to
+change the fuse setting (lfuse:w:0xe4:m) did not appear to work as expected. 
+
+If it can be made to work, a `make fuse` target will be added to the makefile
+that selects the correct fuse settings.
+
+If anyone has an idea why this isn't working as expected, please let me know at
+fletch@fletchtronics.net.
